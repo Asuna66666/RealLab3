@@ -36,22 +36,13 @@
                         <input type="text" placeholder="Нууц үгээ баталгаажуулна уу" required>
                         </div>
                 </div>
-            <div class="gender-details">
-                <span class="gender-title">Хүйс</span>
-                <div class="category">
-                    <label for="">
-                        <span class="dot one"></span>
-                        <span class="gender">Эрэгтэй</span>
-                    </label>
-                    <label for="">
-                        <span class="dot one"></span>
-                        <span class="gender">Эмэгтэй</span>
-                    </label>
-                    <label for="">
-                        <span class="dot one"></span>
-                        <span class="gender">Хэлэхгүй байхыг илүүд үзэх</span>
-                    </label>
-                </div>
+                <form action="/action_page.php">
+               <label for="sex">Хүйс:</label>
+               <select id="sex" name="sex">
+               <option value="eregtei">Эрэгтэй</option>
+               <option value="emegtei">Эмэгтэй</option>
+                <option value="helehgui">Хэлэхгүй байхыг илүүд үзэх</option>
+               </select>
             </div>
             <div class="button">
                 <input type="submit" value="Бүртгүүлэх">
