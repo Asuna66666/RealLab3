@@ -1,6 +1,13 @@
-body{
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Poppins', sans-serif;
 }
+body{
+    background: url(https://as2.ftcdn.net/v2/jpg/06/08/91/47/1000_F_608914767_JLvle6ANH0wPqZzSuK9XCzIR2q1rEv73.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
