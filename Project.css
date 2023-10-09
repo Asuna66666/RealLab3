@@ -5,7 +5,7 @@
     font-family:'Poppins', sans-serif;
 }
 body{
-    background: url(https://as2.ftcdn.net/v2/jpg/06/08/91/47/1000_F_608914767_JLvle6ANH0wPqZzSuK9XCzIR2q1rEv73.jpg);
+    background: url(https://as2.ftcdn.net/v2/jpg/02/14/33/79/1000_F_214337983_mY6ppEb8tVGw9lfKiAUGUFOp1ubwVCM8.jpg);
     height: 100vh;
     background-size: cover;
     background-position: center;
@@ -24,3 +24,9 @@ body{
     padding: 25px 30px;
     border-radius: 5%;
 }
+.container .title{
+    color: dark;
+    font-size: 50px;
+    font-weight: 500;
+}
+
