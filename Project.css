@@ -29,4 +29,9 @@ body{
     font-size: 50px;
     font-weight: 500;
 }
+.container form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+}
+
 
