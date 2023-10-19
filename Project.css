@@ -54,11 +54,11 @@ form .user-details .input{
     padding-left: 15px;
     font-size: 16px;
 }
-form .button{
+.button{
     height: 45px;
     margin: 45px 0;
 }
-form .button input{
+.button button{
     height: 100%;
     width: 100%;
     background: antiquewhite;
