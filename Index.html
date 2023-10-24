@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title> Хэрэглэгчийн бүртгэл </title>
-        <link rel="stylesheet" href="Project.css">
+        <link rel="stylesheet" href="Style.css">
         <meta name="viewport" content="width=device-width", initial-scale="1.0">
     </head>
     <body> 
@@ -20,7 +20,7 @@
                         <input type="text" placeholder="Өөрийн нэрээ оруулна уу." required>
                          </div>
                     <div class="input-box">
-                        <span class="email">email</span>
+                        <span class="email">Email</span>
                         <input type="text" placeholder="Имэйл хаягаа оруулна уу." required>
                         </div>
                     <div class="input-box">
@@ -42,12 +42,19 @@
                <option value="emegtei">Эмэгтэй</option>
                 <option value="helehgui">Хэлэхгүй байхыг илүүд үзэх</option>
                </select>
-               <div class="button">
-                <!-- button bolgon solison mun page solih heseg -->
-                <button type="button" onclick="window.location.href = 'sign_up.html';">Бүртгүүлэх</button>
-            </div>
+               <div>
+
+                   <button id="customButton">Бүртгүүлэх</button>
+               </div>
             </div>
             </form>
         </div>
+        
+    <script>
+    const customButton = document.getElementById("customButton");
+    customButton.addEventListener("click", function () {
+         alert("Та амжилттай бүртгүүллээ");
+    });
+    </script>
     </body>
 </html>
