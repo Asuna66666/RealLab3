@@ -3,11 +3,20 @@
     <head>
         <meta charset="UTF-8">
         <title> Хэрэглэгчийн бүртгэл </title>
-        <link rel="stylesheet" href="Project.css">
+        <link rel="stylesheet" href="Style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+
         <meta name="viewport" content="width=device-width", initial-scale="1.0">
     </head>
     <body> 
         <div class="container">
+            <span id="hours">00</span>
+            <span>:</span>
+            <span id="minutes">00</span>
+            <span>:</span>
+            <span id="seconds">00</span>
+            <span id="session">AM</span>
+            <i class="bi bi-brightness-high-fill" id="toggleDark"></i>
             <div class="title"> Бүртгэл </div>
             <form action="#">
                 <div class="user-details">
@@ -20,7 +29,7 @@
                         <input type="text" placeholder="Өөрийн нэрээ оруулна уу." required>
                          </div>
                     <div class="input-box">
-                        <span class="email">email</span>
+                        <span class="email">Email</span>
                         <input type="text" placeholder="Имэйл хаягаа оруулна уу." required>
                         </div>
                     <div class="input-box">
@@ -42,11 +51,60 @@
                <option value="emegtei">Эмэгтэй</option>
                 <option value="helehgui">Хэлэхгүй байхыг илүүд үзэх</option>
                </select>
-               <div class="button">
-                <input type="submit" value="Бүртгүүлэх">
-            </div>
+               <div>
+
+                   <button id="customButton">Бүртгүүлэх</button>
+               </div>
             </div>
             </form>
         </div>
+        
+    <script>
+    const customButton = document.getElementById("customButton");
+    const toggle = document.getElementById('toggleDark');
+    const body = document.querySelector('body');
+
+    
+
+    customButton.addEventListener("click", function () {
+         alert("Та амжилттай бүртгүүллээ");
+    });
+
+    function displayTime(){
+        var dateTime = new Date();
+        var hrs = dateTime.getHours();
+        var min = dateTime.getMinutes();
+        var sec = dateTime.getSeconds();
+        var session = document.getElementById('session');
+
+        if(hrs >= 12){
+            session.innerHTML = 'PM';
+        }else{
+            session.innerHTML = 'AM';
+        }
+        
+        if(hrs>12){
+            hrs = hrs - 12;
+        }
+
+        document.getElementById('hours').innerHTML = hrs;
+        document.getElementById('minutes').innerHTML = min;
+        document.getElementById('seconds').innerHTML = sec;
+    }
+    setInterval(displayTime, 10);
+
+    toggle.addEventListener('click', function(){
+    this.classList.toggle('bi-moon');
+    if(this.classList.toggle('bi-brightness-high-fill')){
+        body.style.background = 'white';
+        body.style.color = 'black';
+        body.style.transition = '2s';
+    }else{
+        body.style.background = 'black';
+        body.style.color = 'white';
+        body.style.transition = '2s';
+    }
+    });
+    </script>
     </body>
 </html>
